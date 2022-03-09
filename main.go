@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"net/http"
 )
 
@@ -17,6 +18,11 @@ type Message struct {
 
 func main() {
 	e := echo.New()
+
+	e.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
+		Format: "method=${method}, uri=${uri}, status=${status}\n",
+	}))
+
 	e.GET("/users", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, []User{
 			{Id: 1, Name: "john doe"},
