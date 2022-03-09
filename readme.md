@@ -1,6 +1,21 @@
-# Endpoints
+## How to run
 
-## GET "/new"
+- Mac : https://github.com/harryosmar/mock-api/blob/master/build/mock-api-darwin-64
+- Windows 64 Bit : https://github.com/harryosmar/mock-api/blob/master/build/mock-api-windows-64
+- Windows 32 Bit : https://github.com/harryosmar/mock-api/blob/master/build/mock-api-windows-32
+
+```shell script
+git clone git@github.com:harryosmar/mock-api.git
+
+cd mock-api
+
+# for mac
+./build/mock-api-darwin-64
+```
+
+## Endpoints
+
+### GET "/new"
 
 Request
 
@@ -18,7 +33,7 @@ Response
 }
 ```
 
-## GET "/"
+### GET "/"
 
 Request
 
@@ -30,7 +45,7 @@ Response
 - Status Code : `301` Moved Permanently
 - Content-Type : text/plain; charset=UTF-8
 
-## GET "/nonexisting"
+### GET "/nonexisting"
 
 Request
 
@@ -42,7 +57,7 @@ Response
 - Status Code : `404` Not Found
 - Content-Type : text/plain; charset=UTF-8
 
-## GET "/users"
+### GET "/users"
 
 Request
 
@@ -67,7 +82,7 @@ Response
 ]
 ```
 
-## POST "/users"
+### POST "/users"
 
 Request
 
